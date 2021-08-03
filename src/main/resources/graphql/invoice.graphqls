@@ -1,0 +1,53 @@
+input InvoiceInput {
+    invoiceNumber: String!
+    totalAmount: Float!
+    currencyCode: String!
+    issueDate: String!
+    lines: [InvoiceLineInput!]!
+    customer: CustomerInput!
+}
+
+input InvoiceLineInput {
+    lineNumber: Int!
+    amount: Float!
+    taxAmount: Float!
+}
+
+input CustomerInput {
+    firstName: String!
+    lastName: String!
+    taxNumber: String!
+}
+
+type InvoiceVo {
+    invoiceNumber: String!
+    totalAmount: Float!
+    currencyCode: String!
+    issueDate: String!
+    status: String!
+    lines: [InvoiceLineVo!]!
+    customer: CustomerVo!
+}
+
+type InvoiceLineVo {
+    lineNumber: String!
+    amount: Float!
+    taxAmount: Float!
+}
+
+type CustomerVo {
+    firstName: String!
+    lastName: String!
+    taxNumber: String!
+}
+
+#Root
+type Query {
+    invoices: [InvoiceVo!]
+    invoice(invoiceNumber: String!): InvoiceVo!
+}
+
+#Root
+type Mutation {
+    createInvoice(invoice: InvoiceInput!): InvoiceVo
+}

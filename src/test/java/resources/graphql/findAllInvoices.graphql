@@ -1,0 +1,12 @@
+query {
+    invoices {
+        invoiceNumber
+        totalAmount
+        currencyCode
+        status
+        customer {
+            firstName
+            lastName
+        }
+    }
+}
