@@ -31,8 +31,6 @@ public class InvoiceService {
 
     public InvoiceVo createInvoice(InvoiceInput invoiceInput) {
         final Invoice invoice = invoiceInputMapper.invoiceInputToEntity(invoiceInput);
-        invoice.setStatus("CREATED");
-        invoice.getLines().forEach(line -> line.setInvoice(invoice));
         invoiceRepository.save(invoice);
         return invoiceVoMapper.invoiceToVo(invoice);
     }

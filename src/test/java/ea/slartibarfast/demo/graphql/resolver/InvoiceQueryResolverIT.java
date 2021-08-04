@@ -1,4 +1,4 @@
-package ea.slartibarfast.demo.graphql.query;
+package ea.slartibarfast.demo.graphql.resolver;
 
 import com.graphql.spring.boot.test.GraphQLResponse;
 import com.graphql.spring.boot.test.GraphQLTestTemplate;
@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class InvoiceQueryIT {
+public class InvoiceQueryResolverIT {
 
     @Autowired
     private GraphQLTestTemplate graphQLTestTemplate;

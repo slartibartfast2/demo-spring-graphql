@@ -1,0 +1,10 @@
+{
+  "inv": {
+    "invoiceNumber": "5",
+    "totalAmount": 100.00,
+    "currencyCode": "TRY",
+    "issueDate": "2021-08-03",
+    "customer": {"firstName": "Erdem", "lastName": "A", "taxNumber": "asdasd"},
+    "lines": {"lineNumber": 1, "taxAmount": 40.00, "amount": 60.00 }
+  }
+}

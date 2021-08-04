@@ -1,0 +1,23 @@
+mutation CreateInvoice($inv: InvoiceInput!) {
+    createInvoice(invoice: $inv) {
+        invoiceNumber
+        totalAmount
+        currencyCode
+        issueDate
+        customer {
+            firstName
+            lastName
+            taxNumber
+        }
+        lines {
+            lineNumber
+            amount
+            taxAmount
+        }
+    }
+}
+
+
+
+
+
